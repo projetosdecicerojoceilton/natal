@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title> Projeto </title>
+
+	<style type="text/css">
+		.content {
+			width:  400px;
+			height: 600px;
+			background-color: #eee;
+			margin: 0 auto;
+		}
+	</style>
+
+</head>
+<body>
+	
+
+	<div class="content">
+
+		<h1 class="nome"> </h1>
+
+		<img src="img/feliznatal.gif">
+		
+	</div>
+
+
+	<script type="text/javascript" src="https://code.jquery.com/jquery-3.6.1.min.js"></script>
+	<script type="text/javascript">
+		$(function() {
+			$.ajax({
+				url: "http://localhost:3000/nome",
+				method: "GET"
+			}).done(function(data) {
+				$(".nome").text(data)
+			})
+		})
+	</script>
+
+</body>
+</html>
